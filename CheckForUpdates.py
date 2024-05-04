@@ -146,10 +146,13 @@ class YuriUpdateChecker():
                             imageType = '.jpg'
                                 
                         elif imageType == '.jpg':
+                            imageType = '.webp'
+
+                        elif imageType == '.webp':
                             imageType = '.png'
 
                         else:
-                            imageType = '.jpg'
+                            imageType = ".png"
 
                         imageLinkList[i] = domainName + imageSplitLink + pageTitles[i] + imageType
                         os.remove(fullPath)
@@ -164,7 +167,7 @@ class YuriUpdateChecker():
                     i = i+1
 
             except FileNotFoundError:
-                print("Oops directory not found not found")
+                print("Oops directory not found")
                 i = i+1
                     
 
